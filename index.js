@@ -26,4 +26,6 @@ submitButton.addEventListener("click", () => {
     .catch((error) => {
         console.error('Error:', error); 
     });
+
+    location.reload();
 });

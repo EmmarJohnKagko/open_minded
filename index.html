@@ -58,11 +58,11 @@
 
     <script>
         document.addEventListener("DOMContentLoaded", function() {
-            fetch('http://localhost/ACTIVITY/index.php')
+            fetch('http://localhost/ACTIVITY/display.php')
             .then(res => res.json())
             .then(data => {
-                data.forEach(post => {
-                    const markup = `<tr><td>${post.id}</td><td>${post.firstname}</td><td>${post.lastname}</td></tr>`;
+                data.forEach(get => {
+                    const markup = `<tr><td>${get.id}</td><td>${get.firstname}</td><td>${get.lastname}</td></tr>`;
                     document.getElementById('myTable').insertAdjacentHTML('beforeend', markup);
                 });
             })
